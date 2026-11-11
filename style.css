@@ -1,0 +1,225 @@
+/* ===== COLOUR PALETTE (change colours here only) ===== */
+:root {
+  --primary: #0b3c5d;      /* header, footer, table heads */
+  --secondary: #328cc1;    /* links, headings */
+  --accent: #1fb5a5;       /* underlines, hover, borders */
+  --background: #eef3f8;   /* page background */
+  --card: #ffffff;         /* section cards */
+  --text: #1a1a2e;         /* main text */
+}
+
+/* ===== General ===== */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+  background-color: var(--background);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+/* ===== Header and Navigation ===== */
+header {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  padding: 30px 20px 15px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+}
+
+nav { margin-top: 15px; }
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  margin: 0 6px;
+  padding: 8px 14px;
+  display: inline-block;
+  border-radius: 20px;
+  transition: background-color 0.3s;
+}
+
+nav a:hover {
+  background-color: var(--accent);
+}
+
+/* ===== Main Content ===== */
+main {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+section {
+  background-color: var(--card);
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(11, 60, 93, 0.12);
+}
+
+/* ===== Headings and Paragraphs ===== */
+h2 {
+  color: var(--primary);
+  margin-bottom: 12px;
+  border-bottom: 3px solid var(--accent);
+  padding-bottom: 5px;
+  display: inline-block;
+}
+
+h3 { color: var(--secondary); margin-bottom: 6px; }
+
+p { margin-bottom: 12px; }
+
+a { color: var(--secondary); }
+
+/* ===== Home Page ===== */
+.hero { text-align: center; }
+
+.profile-pic {
+  width: 220px;
+  height: 220px;
+  border-radius: 20px;
+  object-fit: cover;
+  object-position: top;
+  border: 5px solid var(--accent);
+  box-shadow: 0 6px 16px rgba(11, 60, 93, 0.3);
+  display: block;
+  margin: 0 auto 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.profile-pic:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 24px rgba(11, 60, 93, 0.4);
+}
+
+/* ===== Lists ===== */
+ul, ol { margin-left: 25px; margin-bottom: 12px; }
+li { margin-bottom: 6px; }
+
+/* ===== Skills Table ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+th, td {
+  border: 1px solid #d5dde6;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: var(--primary);
+  color: white;
+}
+
+tr:nth-child(even) { background-color: #f1f6fa; }
+
+tr:hover td { background-color: #dff5f2; }
+
+/* ===== Projects ===== */
+article {
+  border-left: 5px solid var(--accent);
+  background-color: #f7fafc;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+}
+
+/* ===== Contact Form ===== */
+form { display: flex; flex-direction: column; gap: 8px; }
+
+label { font-weight: 600; color: var(--primary); }
+
+input, select, textarea {
+  padding: 10px;
+  border: 1px solid #b8c4d0;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 5px rgba(31, 181, 165, 0.6);
+}
+
+button {
+  background-color: var(--primary);
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background-color 0.3s;
+}
+
+button:hover { background-color: var(--accent); }
+nav a:hover {
+  background-color: var(--accent);
+  color: white;
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 18px;
+  margin-top: 30px;
+}
+
+/* ===== Phones ===== */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+  nav a { display: block; margin: 5px 0; }
+  table { font-size: 0.9rem; }
+}
+
+/* ===== Home page button ===== */
+.hero a {
+  display: inline-block;
+  background-color: var(--primary);
+  color: white;
+  padding: 10px 22px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.hero a:hover {
+  background-color: var(--accent);
+}
+
+.hero p {
+  color: #1a1a2e;
+}
+.card {
+    background-color: #ffffff;
+    border: 1px solid #d1d8e0;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+/* ===== ID styling ===== */
+#message {
+  min-height: 120px;
+}
